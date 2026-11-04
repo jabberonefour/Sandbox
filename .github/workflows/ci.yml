@@ -1,0 +1,23 @@
+
+name: My First CI Pipeline
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Run a simple test
+        run: |
+          echo "Starting automated tests..."
+          echo "Checking release workflow..."
+          test -f README.md
+          echo "All tests passed!"
