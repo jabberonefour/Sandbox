@@ -19,5 +19,5 @@ jobs:
         run: |
           echo "Starting automated tests..."
           echo "Checking release workflow..."
-          test -f README.md
+          test -f MISSING_FILE.md
           echo "All tests passed!"
